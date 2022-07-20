@@ -5,16 +5,12 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
-import java.time.LocalDateTime;
-import java.util.ArrayList;
 import java.util.List;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class PedidoPagoEvent {
-
-    private LocalDateTime data;
 
     private BigDecimal valorTotal;
 
@@ -34,7 +30,7 @@ public class PedidoPagoEvent {
 
     static public PedidoPagoEvent converter(PedidoGeradoEvent event) {
 
-        return new PedidoPagoEvent(event.getData(), event.getValorTotal(), event.getIdCliente(), event.getCpfCliente(), event.getNomeCliente(), event.getPedidoId(), StatusPedido.PAGO, event.getEndereco(), event.getItemDePedidoEvents());
+        return new PedidoPagoEvent(event.getValorTotal(), event.getIdCliente(), event.getCpfCliente(), event.getNomeCliente(), event.getPedidoId(), StatusPedido.PAGO, event.getEndereco(), event.getItemDePedidoEvents());
 
     }
 
