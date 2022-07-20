@@ -2,8 +2,11 @@ package br.com.alura.pagamento;
 
 import java.net.URI;
 
+import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.messaging.Message;
+import org.springframework.messaging.support.MessageBuilder;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -18,7 +21,6 @@ import org.springframework.web.util.UriComponentsBuilder;
 class PagamentoController {
 
 	private final PagamentoRepository pagamentoRepository;
-
 	public PagamentoController(PagamentoRepository pagamentoRepository) {
 		this.pagamentoRepository = pagamentoRepository;
 	}

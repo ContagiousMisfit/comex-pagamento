@@ -31,9 +31,8 @@ class Pagamento {
 	public Pagamento() {
 	}
 
-	public Pagamento(Long id, @NotNull @Positive BigDecimal valor, @NotBlank @Size(max = 100) String cpfCliente,
+	public Pagamento(@NotNull @Positive BigDecimal valor, @NotBlank @Size(max = 100) String cpfCliente,
 			Long pedidoId) {
-		this.id = id;
 		this.valor = valor;
 		this.cpfCliente = cpfCliente;
 		this.pedidoId = pedidoId;
